@@ -1,0 +1,39 @@
+/*
+Task_3 needs this file
+to delete all its comments
+and print it to the console
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void powerSum(unsigned char*);
+
+int main()
+{   
+    // 0 - 255
+    unsigned char x = 87; // 0101 0111
+
+    powerSum(&x);
+
+    return 0;
+}
+	/* 
+		This is a comment!
+	*/
+void powerSum(unsigned char *num){
+
+    for (int i = 7; i >= 0; i--){
+
+        unsigned char temp = *num;		// Another comment
+        temp >>= i;
+        temp &= 1;
+        printf("(%d x 2**%d)", temp, i);
+
+        if (i > 0){
+            printf(" + ");		/* and once more */
+        }
+    }
+    printf("\n");
+}
+
